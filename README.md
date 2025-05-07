@@ -147,3 +147,4 @@ listening on enp0s9, link-type EN10MB (Ethernet), capture size 262144 bytes
 08:56:21.337544 IP router2 > 192.168.10.1: ICMP echo reply, id 2, seq 1, length 64
 08:56:22.352555 IP 192.168.10.1 > router2: ICMP echo request, id 2, seq 2, length 64
 ```
+
