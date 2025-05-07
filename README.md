@@ -12,3 +12,9 @@
 
 ---
 
+
+Дано:
+
+
+![image](https://github.com/user-attachments/assets/dddaba8d-0740-45d2-8ca8-e953088004ff)
+
