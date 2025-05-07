@@ -50,7 +50,7 @@ O>* 192.168.20.0/24 [110/300] via 10.0.12.2, enp0s9, weight 1, 00:00:22
 O>* 192.168.30.0/24 [110/200] via 10.0.12.2, enp0s9, weight 1, 00:12:15
 router1# exit
 
-root@router1:/home/vagrant# ping -I 192.168.10.1 192.168.20.1
+root@router1:# ping -I 192.168.10.1 192.168.20.1
 PING 192.168.20.1 (192.168.20.1) from 192.168.10.1 : 56(84) bytes of data.
 64 bytes from 192.168.20.1: icmp_seq=1 ttl=64 time=4.23 ms
 64 bytes from 192.168.20.1: icmp_seq=2 ttl=64 time=1.40 ms
@@ -64,7 +64,7 @@ PING 192.168.20.1 (192.168.20.1) from 192.168.10.1 : 56(84) bytes of data.
 
 Ещё раз попингуем,чтобы насладиться симметричным маршрутом.
 
-root@router1:/home/vagrant# ping -I 192.168.10.1 192.168.20.1
+root@router1:# ping -I 192.168.10.1 192.168.20.1
 PING 192.168.20.1 (192.168.20.1) from 192.168.10.1 : 56(84) bytes of data.
 64 bytes from 192.168.20.1: icmp_seq=1 ttl=63 time=6.04 ms
 64 bytes from 192.168.20.1: icmp_seq=2 ttl=63 time=2.31 ms
@@ -91,7 +91,7 @@ O   192.168.20.0/24 [110/100] is directly connected, enp0s10, weight 1, 00:20:23
 O>* 192.168.30.0/24 [110/200] via 10.0.11.1, enp0s9, weight 1, 00:14:37
 
 
-root@router2:/home/vagrant# tcpdump -i enp0s8
+root@router2:# tcpdump -i enp0s8
 tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
 listening on enp0s8, link-type EN10MB (Ethernet), capture size 262144 bytes
 08:51:11.054027 IP router2 > 192.168.10.1: ICMP echo reply, id 1, seq 18, length 64
@@ -100,7 +100,7 @@ listening on enp0s8, link-type EN10MB (Ethernet), capture size 262144 bytes
 
 
 
-root@router2:/home/vagrant# tcpdump -i enp0s9
+root@router2:# tcpdump -i enp0s9
 tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
 listening on enp0s9, link-type EN10MB (Ethernet), capture size 262144 bytes
 08:51:49.032882 IP 10.0.11.1 > ospf-all.mcast.net: OSPFv2, Hello, length 48
@@ -111,7 +111,7 @@ listening on enp0s9, link-type EN10MB (Ethernet), capture size 262144 bytes
 Поднимем стоимость маршрута, чтобы пакеты ходили через соседний роутер.
 
 
-root@router2:/home/vagrant# vtysh
+root@router2:# vtysh
 
 Hello, this is FRRouting (version 10.2.1).
 Copyright 1996-2005 Kunihiro Ishiguro, et al.
@@ -138,7 +138,7 @@ O>* 192.168.30.0/24 [110/200] via 10.0.11.1, enp0s9, weight 1, 00:22:39
 
 
 
-root@router2:/home/vagrant# tcpdump -i enp0s9
+root@router2:# tcpdump -i enp0s9
 tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
 listening on enp0s9, link-type EN10MB (Ethernet), capture size 262144 bytes
 08:56:18.834270 IP router2 > ospf-all.mcast.net: OSPFv2, Hello, length 48
