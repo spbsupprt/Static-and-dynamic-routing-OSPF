@@ -22,3 +22,9 @@
 Выполним плейбук:
 
 https://github.com/spbsupprt/Static-and-dynamic-routing-OSPF/blob/main/ospf.yml
+
+![image](https://github.com/user-attachments/assets/bd45d209-2713-41a2-b604-c3269941d17f)
+
+
+Итоговые проверки:
+
