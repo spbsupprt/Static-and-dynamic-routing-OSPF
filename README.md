@@ -18,3 +18,7 @@
 
 ![image](https://github.com/user-attachments/assets/dddaba8d-0740-45d2-8ca8-e953088004ff)
 
+
+Выполним плейбук:
+
+https://github.com/spbsupprt/Static-and-dynamic-routing-OSPF/blob/main/ospf.yml
